@@ -7,7 +7,7 @@ public class Zajecia1 {
 //        displayArray();
 //        listEven();
 //        sumOfEven();
-//        sumOfArray();
+        sumOfArray();
     }
 
     public static void sumOfArray() {

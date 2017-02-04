@@ -16,6 +16,9 @@ public class Zajecia2 {
         System.out.println(firstName + " " + lastName);
         System.out.print("Your age is ");
         System.out.print(age);
+        int[] tablica = {1,2,3,4,5,6,7};
+        int wynik = sumOf(tablica);
+        System.out.println(wynik);
 
         //1. pytamy o liczbe scanner.nextInt
         //2. sprawdzamy czy jest parzysta
