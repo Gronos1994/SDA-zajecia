@@ -16,7 +16,7 @@ public class ZadaniaZeScannerem {
         System.out.println("3. Mnożenie");
         System.out.println("4. Dzielenie");
         int decision = getNumberFromUser("Podaj numer operacji");
-        if (decision <0 || decision > 4){
+        if (decision < 0 || decision > 4) {
             System.out.println("Zła decyzja");
         }
         int firstNumber = getNumberFromUser("Podaj pierwszą liczbę");
@@ -30,13 +30,12 @@ public class ZadaniaZeScannerem {
                 System.out.println(firstNumber * secondNumber);
             }
             if (decision == 4) {
-                if else (secondNumber == 0) {
+                if(secondNumber == 0) {
                     System.out.println("Wrong decision");
                 }
                 System.out.println(firstNumber / secondNumber);
             }
         }
-
     }
 
 
