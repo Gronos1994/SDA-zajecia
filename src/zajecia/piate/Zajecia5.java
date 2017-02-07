@@ -10,11 +10,13 @@ import java.util.Random;
  */
 public class Zajecia5 {
     public static void main(String[] args) {
-        Random random = new Random();
-        int wynik = game(random.nextInt(100));
-        wynik = game(100);
-        System.out.println("Koniec gry.");
-        System.out.println("Liczba kroków: " + wynik);
+//        Random random = new Random();
+//        int wynik = game(random.nextInt(100));
+//        wynik = game(100);
+//        System.out.println("Koniec gry.");
+//        System.out.println("Liczba kroków: " + wynik);
+    int[]orderedArray = homework();
+        printHomework(orderedArray);
     }
 
     public static int[] arrayNumbersFromUser() {
@@ -51,6 +53,28 @@ public class Zajecia5 {
         return counter;
     }
 
+    public static int[] homework() {
+        int[] array = new int[10];
+        boolean flag = true;
+        while (true) {
+            int numberFromUser = ZadaniaZeScannerem.getNumberFromUser();
+            if (numberFromUser >= 0 && numberFromUser <=) {
+                array[numberFromUser] = array++;
+            } else {
+                flag = false
+            }
+        }
+        return array;
+    }
+    public static void printHomework (int[] orderedArray){
+        for (int i = 0; i < orderedArray.length ; i++) {
+            for (int j = 0; j < orderedArray[i]; j++){
+                System.out.println(i);
+            }
+
+        }
+
+}
 
     public static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
@@ -65,7 +89,6 @@ public class Zajecia5 {
         }
         return array;
     }
-
 
     public static int sumOfNumbersFromUser() {
         int sum = 0;
@@ -105,25 +128,19 @@ public class Zajecia5 {
             for (int j = 0; j < number - i - 1; j++) {
 
                 System.out.print(" ");
-
             }
             for (int k = 0; k < (i * 2) + 1; k++) {
                 System.out.print("*");
-
             }
-
             System.out.println();
-
         }
         for (int i = 0; i < number; i++) {
             System.out.print("*");
-
         }
         for (int j = 0; j < number - 1; j++) {
             System.out.print(" ");
         }
         System.out.println();
-
     }
 
     public static void evenMatrix(int number) {
@@ -134,10 +151,8 @@ public class Zajecia5 {
                 } else {
                     System.out.print(0);
                 }
-
             }
             System.out.println();
-
         }
     }
 
