@@ -56,12 +56,12 @@ public class Zajecia5 {
     public static int[] homework() {
         int[] array = new int[10];
         boolean flag = true;
-        while (true) {
+        while (flag) {
             int numberFromUser = ZadaniaZeScannerem.getNumberFromUser();
-            if (numberFromUser >= 0 && numberFromUser <=) {
-                array[numberFromUser] = array++;
+            if (numberFromUser >= 0 && numberFromUser <= 9) {
+                array[numberFromUser]++;
             } else {
-                flag = false
+                flag = false;
             }
         }
         return array;
