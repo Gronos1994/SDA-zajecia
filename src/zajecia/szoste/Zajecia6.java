@@ -1,5 +1,6 @@
 package zajecia.szoste;
 
+import com.sun.xml.internal.fastinfoset.util.CharArray;
 import zajecia.czwarte.ZadaniaZeScannerem;
 
 /**
@@ -9,7 +10,23 @@ public class Zajecia6 {
     public static void main(String[] args) {
         //int numberOfElement = avgUntil(4);
         //System.out.println("Podano " + numberOfElement + "liczb.");
-    calculator();
+        //calculator();
+        System.out.println(cezarCode(("wojna")));
+        System.out.println(cezarCode("Lukasz"));
+        System.out.println(cezarCode("Jest grubo"));
+    }
+    public static String cezarCode(String message){
+        return cezarCode((message, 1));
+    }
+    public static String decodeCezarCode (String coddedmessage, int key){
+        return cezarCode(coddedmessage,-key);
+    }
+    public static String cezarCode(String message, int key) {
+        char[] charArray = message.toCharArray();
+        for (int i = 0; i < charArray.length; i++) {
+            charArray[i] = (char)(charArray[i] + key);
+        }
+        return String.valueOf(charArray);
     }
 
     public static void calculator() {
@@ -22,8 +39,8 @@ public class Zajecia6 {
             System.out.println("3. Mnożenie");
             System.out.println("4. Dzielenie");
             int nrDzialania = ZadaniaZeScannerem.getNumberFromUser("Podaj numer działania");
-                int firstNumber = ZadaniaZeScannerem.getNumberFromUser("Podaj pierwszą liczbę:");
-                int secondNumber = ZadaniaZeScannerem.getNumberFromUser("Podaj drugą liczbę:");
+            int firstNumber = ZadaniaZeScannerem.getNumberFromUser("Podaj pierwszą liczbę:");
+            int secondNumber = ZadaniaZeScannerem.getNumberFromUser("Podaj drugą liczbę:");
             switch (nrDzialania) {
                 case 1:
                     System.out.println(firstNumber + "+" + secondNumber + "=" + (firstNumber + secondNumber));
