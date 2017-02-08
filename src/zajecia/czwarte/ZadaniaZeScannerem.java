@@ -37,8 +37,6 @@ public class ZadaniaZeScannerem {
             }
         }
     }
-
-
     public static double avgOfGrades() {
         int size = getNumberFromUser("Insert number of grades.");
         int[] array = new int[size];

@@ -6,8 +6,8 @@ public class Zajecia1 {
 //        array();
 //        displayArray();
 //        listEven();
-//        sumOfEven();
-        sumOfArray();
+        sumOfEven();
+        //sumOfArray();
     }
 
     public static void sumOfArray() {

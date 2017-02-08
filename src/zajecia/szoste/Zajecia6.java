@@ -11,20 +11,17 @@ public class Zajecia6 {
         //int numberOfElement = avgUntil(4);
         //System.out.println("Podano " + numberOfElement + "liczb.");
         //calculator();
-        System.out.println(cezarCode(("wojna")));
+        System.out.println(cezarCode(("działa?")));
         System.out.println(cezarCode("Lukasz"));
         System.out.println(cezarCode("Jest grubo"));
     }
-    public static String cezarCode(String message){
-        return cezarCode((message, 1));
-    }
-    public static String decodeCezarCode (String coddedmessage, int key){
-        return cezarCode(coddedmessage,-key);
-    }
-    public static String cezarCode(String message, int key) {
+
+
+
+    public static String cezarCode(String message) {
         char[] charArray = message.toCharArray();
         for (int i = 0; i < charArray.length; i++) {
-            charArray[i] = (char)(charArray[i] + key);
+            charArray[i] = (char) (charArray[i] + 1);
         }
         return String.valueOf(charArray);
     }
