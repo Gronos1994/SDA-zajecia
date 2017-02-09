@@ -16,9 +16,27 @@ public class Zajecia7 {
         //int[] statistics = stringStatistics(randomString);
         // reverseString("test");
 //        printStringStatistics(reverseString;
-        String message = "Ala ma 3 koty i 2 psy";
-        int sum = sumFromString(message);
-        System.out.println("Ala ma" + sum + "zwierząt");
+//        String message = "Ala ma 3 koty i 2 psy";
+//        int sum = sumFromString(message);
+//        System.out.println("Ala ma" + sum + "zwierząt");
+        boolean check = checkRoundBraces (")(2+3*(2+4*(5/7)");
+        System.out.println(check);
+    }
+
+    public static boolean checkRoundBraces(String message) {
+        char[] charArray = message.toCharArray();
+        int counter = 0;
+        for (int i = 0; i < charArray.length; i++) {
+            if (charArray[i] == '(') {
+                counter++;
+            } else if (charArray[i] == ')') {
+                counter--;
+                if (counter < 0){
+                    break;
+                }
+            }
+        }
+        return counter == 0;
     }
 
     public static int[] stringStatistics(String message) {
