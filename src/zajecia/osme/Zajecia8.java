@@ -10,8 +10,17 @@ public class Zajecia8 {
     public static void main(String[] args) {
         // System.out.println(factorial(1));
 //
-        System.out.println(startsWith3("Ala ma kota" ,"Ala "));
+        String[] strings = split1("Ala ma kota");
+        for (int i = 0; i <strings.length  ; i++) {
+            System.out.println(strings);
+
+        }
     }
+
+    public static String[] split1(String message) {
+        return message.split(" ");
+    }
+
 
     public static int sumOfNumberDigitsWithString(String message) {
         String numberAsString = String.valueOf(message);
@@ -26,13 +35,12 @@ public class Zajecia8 {
         return message.substring(0, expression.length()) == expression;
     }
 
-    public static boolean startsWith3 (String message, String expression) {
+    public static boolean startsWith3(String message, String expression) {
         char[] array = message.toCharArray();
         char[] expressionArray = expression.toCharArray();
         for (int i = 0; i < expressionArray.length; i++) {
             if (array[i] != expressionArray[i]) {
                 return false;
-            } else {
             }
         }
         return true;
